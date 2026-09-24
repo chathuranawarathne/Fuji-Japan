@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" fill="none">
+  <!-- Glowing Filters for Liquid Glass Effect -->
+  <defs>
+    <filter id="emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="fuji-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="water-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mount Fuji stylized curves -->
+  <g id="mountain-symbol" filter="url(#emerald-glow)">
+    <!-- Left cyan water sweep -->
+    <path d="M22 64 C 18 48, 28 32, 44 20 C 52 14, 58 10, 64 8 C 65 14, 62 26, 56 36 C 48 50, 36 60, 22 64 Z" fill="url(#water-cyan)"/>
+    <!-- Center emerald ridge sweep -->
+    <path d="M46 68 C 42 52, 50 36, 64 22 C 72 14, 80 8, 88 5 C 87 14, 80 26, 74 38 C 66 54, 56 64, 46 68 Z" fill="url(#fuji-grad)"/>
+    <!-- Right neon green sweep -->
+    <path d="M82 66 C 80 50, 88 38, 98 28 C 104 22, 112 18, 120 16 C 116 26, 110 38, 102 48 C 94 58, 88 64, 82 66 Z" fill="#10B981"/>
+    <!-- Subtle sun accent -->
+    <circle cx="86" cy="18" r="4.5" fill="#34D399" opacity="0.95"/>
+  </g>
+
+  <!-- Typography for Dark Theme -->
+  <g id="company-name" font-family="'Inter', 'Segoe UI', system-ui, sans-serif">
+    <!-- FUJI crisp pure white -->
+    <text x="135" y="46" font-size="38" font-weight="900" fill="#FFFFFF" letter-spacing="-0.02em">FUJI</text>
+    <!-- JAPAN glowing emerald -->
+    <text x="137" y="72" font-size="21" font-weight="700" fill="#34D399" letter-spacing="0.18em">JAPAN</text>
+    <!-- Divider bar -->
+    <line x1="250" y1="24" x2="250" y2="70" stroke="rgba(52, 211, 153, 0.35)" stroke-width="1.5"/>
+    <!-- Subtitle text -->
+    <text x="264" y="42" font-size="11.5" font-weight="600" fill="#94A3B8" letter-spacing="0.04em">TECHNOLOGY &amp; MATERIALS</text>
+    <text x="264" y="60" font-size="11.5" font-weight="600" fill="#10B981" letter-spacing="0.04em">INTERNATIONAL COORDINATION</text>
+  </g>
+</svg>

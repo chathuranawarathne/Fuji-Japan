@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUJI JAPAN | Technology Sourcing, Advanced Materials & International Business Coordination</title>
+  <meta name="description" content="Connecting Japanese high-end technology, mineral processing equipment, and ultra-high purity natural graphite with global industrial requirements.">
+  
+  <!-- Google Fonts: Inter & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ECFDF5',
+              100: '#D1FAE5',
+              500: '#10B981',
+              600: '#059669',
+              700: '#047857',
+              900: '#022C22',
+            },
+            dark: {
+              950: '#030706',
+              900: '#060F0B',
+              850: '#0A1711',
+              800: '#0F2119',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Dark Liquid Glass Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#030706] text-slate-300 antialiased font-sans selection:bg-emerald-500 selection:text-black relative">
+
+  <!-- Interactive Green & White Animated Liquid Canvas -->
+  <canvas id="bg-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <!-- Ambient Water Glow Orbs in Background (Green & White) -->
+  <div class="water-orb orb-green-1"></div>
+  <div class="water-orb orb-white-1"></div>
+  <div class="water-orb orb-green-2"></div>
+  <div class="water-orb orb-white-2"></div>
+  <div class="water-orb orb-green-3"></div>
+
+  <!-- ================= TOP CONTACT BAR ================= -->
+  <div class="bg-[#020504]/90 text-slate-400 text-xs py-2 px-4 sm:px-8 border-b border-emerald-950/40 relative z-30">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i>
+          Numazu, Shizuoka 410-0317, Japan
+        </span>
+        <span class="hidden md:flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+          +81 55-913-2932
+        </span>
+        <span class="hidden lg:flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-400"></i>
+          fujijapan@zenithair.jp
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 ml-auto">
+        <span class="italic text-emerald-300 font-semibold tracking-wide drop-shadow-[0_0_8px_rgba(52,211,153,0.4)]">
+          "The Future is today."
+        </span>
+        
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle-btn" class="flex items-center gap-1.5 px-3 py-1 bg-black/60 hover:bg-emerald-950/80 text-emerald-300 rounded-lg border border-emerald-500/30 transition text-xs font-semibold shadow-sm">
+          <i data-lucide="languages" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span id="current-lang-label">日本語</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION (LIQUID GLASS) ================= -->
+  <header class="sticky top-0 z-40 glass-nav-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-2 transition hover:opacity-90">
+          <img src="assets/images/logo.svg" alt="FUJI JAPAN Logo" class="h-11 sm:h-13 w-auto drop-shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
+          <a href="#overview" data-i18n="nav.overview" class="hover:text-emerald-400 transition hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]">Overview</a>
+          <a href="#equipment" data-i18n="nav.equipment" class="hover:text-emerald-400 transition hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]">Industrial Equipment</a>
+          <a href="#graphite" data-i18n="nav.graphite" class="hover:text-emerald-400 transition hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]">Graphite &amp; Graphene</a>
+          <a href="#coatings" data-i18n="nav.coatings" class="hover:text-emerald-400 transition hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]">Advanced Coatings</a>
+          <a href="#workflow" data-i18n="nav.sourcing" class="hover:text-emerald-400 transition hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]">Sourcing Model</a>
+          <a href="#contact" data-i18n="nav.contact" class="hover:text-emerald-400 transition hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]">Contact</a>
+        </nav>
+
+        <!-- CTA & Actions -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button data-inquiry-type="graphite" class="open-rfq-modal btn-emerald-glass px-5 py-2.5 rounded-xl text-sm flex items-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span data-i18n="nav.rfq">Request RFQ / Sample</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex lg:hidden">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-emerald-400 hover:bg-emerald-950/50 border border-emerald-500/20 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-emerald-950/60 bg-[#060F0B]/95 px-6 pt-4 pb-6 space-y-3 shadow-2xl backdrop-blur-2xl">
+      <a href="#overview" data-i18n="nav.overview" class="block py-2 text-slate-200 font-medium hover:text-emerald-400">Overview</a>
+      <a href="#equipment" data-i18n="nav.equipment" class="block py-2 text-slate-200 font-medium hover:text-emerald-400">Industrial Equipment</a>
+      <a href="#graphite" data-i18n="nav.graphite" class="block py-2 text-slate-200 font-medium hover:text-emerald-400">Graphite &amp; Graphene</a>
+      <a href="#coatings" data-i18n="nav.coatings" class="block py-2 text-slate-200 font-medium hover:text-emerald-400">Advanced Coatings</a>
+      <a href="#workflow" data-i18n="nav.sourcing" class="block py-2 text-slate-200 font-medium hover:text-emerald-400">Sourcing Model</a>
+      <a href="#contact" data-i18n="nav.contact" class="block py-2 text-slate-200 font-medium hover:text-emerald-400">Contact Us</a>
+      <div class="pt-3">
+        <button data-inquiry-type="graphite" class="open-rfq-modal btn-emerald-glass w-full text-center px-4 py-3 rounded-xl shadow-lg">
+          <span data-i18n="nav.rfq">Request RFQ / Sample</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION (WATER GLASS & DARK GLOW) ================= -->
+  <section id="home" class="relative overflow-hidden py-20 sm:py-28 border-b border-emerald-950/40">
+    <!-- Grid overlay with subtle neon lines -->
+    <div class="absolute inset-0 bg-[radial-gradient(rgba(16,185,129,0.08)_1px,transparent_1px)] [background-size:28px_28px] opacity-70"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div class="max-w-3xl">
+        <!-- Liquid Droplet Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full liquid-badge text-emerald-300 text-xs sm:text-sm font-semibold mb-6">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#10B981] animate-pulse"></span>
+          <span data-i18n="hero.badge">Japan-Based Technical &amp; Trade Partner</span>
+          <span class="text-emerald-600">|</span>
+          <span class="italic text-emerald-200 font-bold" data-i18n="hero.tagline">The Future is today.</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 data-i18n="hero.title" class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight sm:leading-none mb-6">
+          Connecting Japanese Technology, Advanced Materials &amp; Global Opportunity
+        </h1>
+
+        <!-- Subheading -->
+        <p data-i18n="hero.desc" class="text-base sm:text-xl text-slate-300 mb-9 leading-relaxed font-light">
+          FUJI JAPAN bridges high-end Japanese industrial equipment, mineral-processing technologies, and high-purity advanced materials with international industrial and commercial requirements.
+        </p>
+
+        <!-- CTA Buttons with Liquid Glass Aesthetic -->
+        <div class="flex flex-wrap items-center gap-4">
+          <button data-inquiry-type="graphite" class="open-rfq-modal btn-emerald-glass px-7 py-3.5 rounded-2xl flex items-center gap-2.5 text-base">
+            <i data-lucide="flask-conical" class="w-5 h-5 text-black"></i>
+            <span data-i18n="hero.cta_sample">Request Graphite Samples</span>
+          </button>
+          
+          <a href="#equipment" class="btn-dark-glass px-6 py-3.5 rounded-2xl font-semibold text-sm flex items-center gap-2.5">
+            <i data-lucide="cog" class="w-5 h-5 text-emerald-400"></i>
+            <span data-i18n="hero.cta_equipment">Explore Japanese Equipment Sourcing</span>
+          </a>
+
+          <a href="RESOURCES/FUJI_JAPAN_Company_Profile_Website_2026_v3.pdf" download="FUJI_JAPAN_Company_Profile_Website_2026_v3.pdf" target="_blank" class="px-5 py-3.5 text-emerald-300 hover:text-white bg-emerald-950/30 hover:bg-emerald-900/50 rounded-2xl font-semibold text-xs transition flex items-center gap-2 border border-emerald-500/30">
+            <i data-lucide="file-down" class="w-4 h-4 text-emerald-400"></i>
+            <span data-i18n="hero.download_brochure">Download Company Profile (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip in Water-Glass Cards -->
+      <div class="mt-16 pt-10 border-t border-emerald-900/30 grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="water-glass-card p-6">
+          <p class="text-3xl sm:text-4xl font-black text-emerald-400 drop-shadow-[0_0_12px_rgba(52,211,153,0.4)]" data-i18n="stat.carbon">≥ 99.0%</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-400 mt-2" data-i18n="stat.carbon_label">Graphite Carbon Purity</p>
+        </div>
+
+        <div class="water-glass-card p-6">
+          <p class="text-3xl sm:text-4xl font-black text-teal-300 drop-shadow-[0_0_12px_rgba(45,212,191,0.4)]" data-i18n="stat.capacity">Up to ~50 MT</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-400 mt-2" data-i18n="stat.capacity_label">Monthly Graphite Supply</p>
+        </div>
+
+        <div class="water-glass-card p-6">
+          <p class="text-3xl sm:text-4xl font-black text-emerald-300 drop-shadow-[0_0_12px_rgba(110,231,183,0.4)]" data-i18n="stat.support">5-Stage</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-400 mt-2" data-i18n="stat.support_label">Sourcing Support Process</p>
+        </div>
+
+        <div class="water-glass-card p-6">
+          <p class="text-3xl sm:text-4xl font-black text-white" data-i18n="stat.reach">Bilingual</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-400 mt-2" data-i18n="stat.reach_label">Japanese &amp; English Execution</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPANY OVERVIEW ================= -->
+  <section id="overview" class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="building-2" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span data-i18n="overview.section_tag">Who We Are</span>
+          </div>
+          <h2 data-i18n="overview.heading" class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            Technical &amp; International Business Coordination
+          </h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full"></div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          <p data-i18n="overview.text1" class="font-normal text-white">
+            FUJI JAPAN is a Japan-based technical and international business company focused on connecting Japanese technology, industrial equipment and advanced materials with practical market needs.
+          </p>
+          <p data-i18n="overview.text2">
+            Our activities include mineral-processing consultation and equipment buying support, high-purity natural graphite supply, graphene-related product development, advanced coating-material development, and technical/project coordination. We support customers and partners from initial requirement definition through supplier identification, technical evaluation, commercial discussion, sample testing and long-term business development.
+          </p>
+
+          <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+            <div class="flex items-start gap-3.5 p-5 water-glass-card rounded-2xl">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-semibold mb-1">Hands-on Technical Depth</strong>
+                <span class="text-slate-400 text-xs sm:text-sm">Materials formulation, thermal treatment, and lab analytical coordination.</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5 p-5 water-glass-card rounded-2xl">
+              <i data-lucide="shield-check" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-semibold mb-1">Direct Japanese Network</strong>
+                <span class="text-slate-400 text-xs sm:text-sm">Unfiltered access to Japanese engineering firms and specialty suppliers.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIVISION 1: INDUSTRIAL EQUIPMENT ================= -->
+  <section id="equipment" class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="cpu" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span data-i18n="p1.badge">Division 01</span>
+        </div>
+        <h2 data-i18n="p1.title" class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          Industrial Equipment &amp; Mineral Processing Support
+        </h2>
+        <p data-i18n="p1.desc" class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          Consultation and equipment buying support for customers seeking Japanese technology for large-throughput alluvial mineral-sand separation and related mineral-processing requirements.
+        </p>
+      </div>
+
+      <!-- Scope & Key Deliverables -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+            <i data-lucide="search" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Japanese Tech Sourcing</h3>
+          <p data-i18n="p1.point1" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Sourcing of Japanese separation, screening, classification, gravity and magnetic-separation technologies.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-4 shadow-[0_0_15px_rgba(45,212,191,0.2)]">
+            <i data-lucide="scale" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Technical &amp; Commercial Due Diligence</h3>
+          <p data-i18n="p1.point2" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Supplier comparison, quotation coordination, meetings, technical documentation and logistics follow-up.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+            <i data-lucide="git-merge" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">End-to-End Coordination</h3>
+          <p data-i18n="p1.point3" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Act as a sourcing and coordination partner, bridging client process goals with Japanese engineering capabilities.
+          </p>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE MINERAL-SAND SEPARATION PIPELINE (LIQUID GLASS) -->
+      <div class="water-glass-card p-6 sm:p-8 rounded-3xl mb-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 data-i18n="p1.scope_title" class="text-xl font-bold text-white">Typical Technical Scope (Mineral Sand Beneficiation Flow)</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Click any process stage below to inspect key technology and Japanese sourcing advantages.</p>
+          </div>
+          <button data-inquiry-type="equipment" class="open-rfq-modal text-xs font-semibold px-4 py-2 btn-dark-glass rounded-xl flex items-center gap-1.5">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+            Inquire About Equipment Sourcing
+          </button>
+        </div>
+
+        <!-- 5 Interactive Pipeline Buttons with Water-Glass Aesthetics -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+          <button data-step="feed" class="pipeline-btn active p-3.5 rounded-2xl text-left transition">
+            <span class="text-[11px] font-extrabold text-emerald-400 block mb-1">STAGE 01</span>
+            <span class="text-xs sm:text-sm font-bold text-white block" data-i18n="pipe.s1_title">Feed Preparation</span>
+          </button>
+
+          <button data-step="screening" class="pipeline-btn p-3.5 rounded-2xl text-left transition">
+            <span class="text-[11px] font-extrabold text-slate-500 block mb-1">STAGE 02</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-300 block" data-i18n="pipe.s2_title">Screening &amp; Classification</span>
+          </button>
+
+          <button data-step="gravity" class="pipeline-btn p-3.5 rounded-2xl text-left transition">
+            <span class="text-[11px] font-extrabold text-slate-500 block mb-1">STAGE 03</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-300 block" data-i18n="pipe.s3_title">Gravity Separation</span>
+          </button>
+
+          <button data-step="magnetic" class="pipeline-btn p-3.5 rounded-2xl text-left transition">
+            <span class="text-[11px] font-extrabold text-slate-500 block mb-1">STAGE 04</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-300 block" data-i18n="pipe.s4_title">Magnetic Separation</span>
+          </button>
+
+          <button data-step="product" class="pipeline-btn p-3.5 rounded-2xl text-left transition">
+            <span class="text-[11px] font-extrabold text-slate-500 block mb-1">STAGE 05</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-300 block" data-i18n="pipe.s5_title">Product Streams</span>
+          </button>
+        </div>
+
+        <!-- Detail Box populated dynamically -->
+        <div id="pipeline-detail-content">
+          <div class="p-6 water-glass-card rounded-2xl border border-emerald-500/30 transition-all duration-300">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-xl font-bold text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                <i data-lucide="layers" class="w-5 h-5 text-emerald-400"></i>
+              </span>
+              <h4 class="text-xl font-bold text-white tracking-wide">Feed Preparation &amp; Slurry Conditioning</h4>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-3">
+              <div class="bg-black/40 p-4 rounded-xl border border-emerald-500/20 backdrop-blur-sm shadow-inner">
+                <p class="font-semibold text-emerald-400 mb-1.5 flex items-center gap-2">
+                  <i data-lucide="settings" class="w-4 h-4 text-emerald-400"></i> Key Technology &amp; Units
+                </p>
+                <p class="text-slate-300 leading-relaxed text-xs sm:text-sm">High-density attrition scrubbers, trommel desliming, steady-head distribution boxes.</p>
+              </div>
+              <div class="bg-black/40 p-4 rounded-xl border border-teal-500/20 backdrop-blur-sm shadow-inner">
+                <p class="font-semibold text-teal-300 mb-1.5 flex items-center gap-2">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-teal-400"></i> Japanese Sourcing &amp; Engineering Advantage
+                </p>
+                <p class="text-slate-300 leading-relaxed text-xs sm:text-sm">Japanese high-durability wear-resistant polyurethane linings and precision flow meters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Positioning Disclaimer Note -->
+      <div class="p-5 water-glass-card border-l-4 border-l-emerald-500 rounded-2xl text-xs sm:text-sm text-slate-400">
+        <strong class="text-white font-semibold" data-i18n="p1.disclaimer_title">Positioning Note:</strong>
+        <span data-i18n="p1.disclaimer_text" class="ml-1">
+          FUJI JAPAN provides consultation, sourcing and equipment buying support. Final equipment design, manufacture, process guarantees, warranty and commissioning obligations remain with the selected manufacturer or contracting parties.
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DIVISION 2: GRAPHITE & GRAPHENE ================= -->
+  <section id="graphite" class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="gem" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span data-i18n="p2.badge">Division 02</span>
+        </div>
+        <h2 data-i18n="p2.title" class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-2">
+          Natural Graphite Trading &amp; Graphene Products
+        </h2>
+        <p data-i18n="p2.subtitle" class="text-lg font-bold text-emerald-400 mb-3 drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">
+          Sri Lankan Natural Crystalline Vein Graphite
+        </p>
+        <p data-i18n="p2.desc" class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          High-purity natural graphite offered for industrial evaluation, further processing, purification and long-term supply partnerships in Japan and international markets.
+        </p>
+      </div>
+
+      <!-- Technical Specification Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14">
+        
+        <!-- Left: Technical Data Sheet (Water-Glass Dark Card) -->
+        <div class="lg:col-span-7 water-glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-emerald-500/30">
+          <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none"></div>
+          
+          <div class="flex items-center justify-between border-b border-emerald-900/40 pb-4 mb-6">
+            <div>
+              <span class="text-emerald-400 font-mono text-xs uppercase tracking-wider">Raw Material Specification</span>
+              <h3 class="text-xl font-bold text-white">Vein Graphite Technical Profile</h3>
+            </div>
+            <span class="px-3 py-1 bg-emerald-950/80 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-500/40 shadow-[0_0_10px_rgba(16,185,129,0.3)]">
+              Lab Verified
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="bg-black/50 p-4 rounded-2xl border border-emerald-500/15">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="p2.spec_origin_label">Origin</span>
+              <strong class="text-sm sm:text-base text-white font-bold" data-i18n="p2.spec_origin_val">Sri Lanka</strong>
+            </div>
+
+            <div class="bg-black/50 p-4 rounded-2xl border border-emerald-500/25">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="p2.spec_carbon_label">Fixed Carbon</span>
+              <strong class="text-xl sm:text-2xl text-emerald-400 font-black drop-shadow-[0_0_10px_rgba(52,211,153,0.5)]" data-i18n="p2.spec_carbon_val">≥ 99.0%</strong>
+            </div>
+
+            <div class="bg-black/50 p-4 rounded-2xl border border-emerald-500/15">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="p2.spec_moisture_label">Moisture</span>
+              <strong class="text-sm sm:text-base text-teal-300 font-bold" data-i18n="p2.spec_moisture_val">≤ 0.20%</strong>
+            </div>
+
+            <div class="bg-black/50 p-4 rounded-2xl border border-emerald-500/15">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="p2.spec_particle_label">Particle Size</span>
+              <strong class="text-xs sm:text-sm text-white font-bold" data-i18n="p2.spec_particle_val">+150 mesh ≥ 50%</strong>
+            </div>
+
+            <div class="bg-black/50 p-4 rounded-2xl border border-emerald-500/15">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="p2.spec_capacity_label">Supply Capacity</span>
+              <strong class="text-xs sm:text-sm text-white font-bold" data-i18n="p2.spec_capacity_val">Up to ~50 MT/month</strong>
+            </div>
+
+            <div class="bg-black/50 p-4 rounded-2xl border border-emerald-500/25">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="p2.spec_sample_label">Sample Availability</span>
+              <strong class="text-xs sm:text-sm text-emerald-300 font-bold" data-i18n="p2.spec_sample_val">Available on Request</strong>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-emerald-900/40 flex flex-wrap items-center justify-between gap-4">
+            <span class="text-xs text-slate-400">Suitable for high-temperature crucibles, refractory bricks, battery anodes &amp; conductive additives.</span>
+            <button data-inquiry-type="graphite" class="open-rfq-modal btn-emerald-glass px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+              <i data-lucide="package" class="w-4 h-4 text-black"></i>
+              Request Evaluation Sample
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Commercial Positioning -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          <h3 data-i18n="p2.buyers_title" class="text-lg font-bold text-white">Commercial Positioning &amp; Customer Channels</h3>
+          
+          <div class="space-y-3">
+            <div class="p-4 water-glass-card rounded-2xl">
+              <h4 data-i18n="p2.b1_title" class="text-sm font-bold text-emerald-300 mb-0.5">Buyer / Trader</h4>
+              <p data-i18n="p2.b1_desc" class="text-xs text-slate-400">Evaluation of a high-purity Sri Lankan supply source and stable-volume commercial procurement.</p>
+            </div>
+
+            <div class="p-4 water-glass-card rounded-2xl">
+              <h4 data-i18n="p2.b2_title" class="text-sm font-bold text-emerald-300 mb-0.5">Processor / Purifier</h4>
+              <p data-i18n="p2.b2_desc" class="text-xs text-slate-400">Feedstock for sizing, chemical/thermal purification, surface treatment and downstream processing.</p>
+            </div>
+
+            <div class="p-4 water-glass-card rounded-2xl">
+              <h4 data-i18n="p2.b3_title" class="text-sm font-bold text-emerald-300 mb-0.5">Industrial User</h4>
+              <p data-i18n="p2.b3_desc" class="text-xs text-slate-400">Suitability assessment for refractory, conductive, lubricant, composite and specialty foundry uses.</p>
+            </div>
+
+            <div class="p-4 water-glass-card rounded-2xl">
+              <h4 data-i18n="p2.b4_title" class="text-sm font-bold text-emerald-300 mb-0.5">Long-term Partner</h4>
+              <p data-i18n="p2.b4_desc" class="text-xs text-slate-400">Stable supply arrangements following technical qualification and commercial alignment.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Graphene Products & Direction -->
+      <div class="water-glass-card rounded-3xl p-6 sm:p-8 border border-emerald-500/30">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i>
+              Advanced Materials Direction
+            </div>
+            <h3 data-i18n="p2.graphene_title" class="text-xl font-bold text-white">Graphene Products &amp; Development Direction</h3>
+            <p data-i18n="p2.graphene_desc" class="text-sm text-slate-300 font-light">
+              Graphene-related materials derived directly from high-crystallinity vein graphite resources.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <div class="bg-black/50 p-5 rounded-2xl border border-emerald-500/20">
+            <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-center text-xs mb-3 border border-emerald-500/30">01</span>
+            <strong class="text-sm text-white block mb-1">Product Forms</strong>
+            <p data-i18n="p2.g1" class="text-xs text-slate-400 leading-relaxed">Powder, dispersion, film and coating-material development direction.</p>
+          </div>
+
+          <div class="bg-black/50 p-5 rounded-2xl border border-emerald-500/20">
+            <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-center text-xs mb-3 border border-emerald-500/30">02</span>
+            <strong class="text-sm text-white block mb-1">Target Applications</strong>
+            <p data-i18n="p2.g2" class="text-xs text-slate-400 leading-relaxed">Conductive, composite, energy-related (anodes/supercaps), coatings and R&amp;D applications.</p>
+          </div>
+
+          <div class="bg-black/50 p-5 rounded-2xl border border-emerald-500/20">
+            <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-center text-xs mb-3 border border-emerald-500/30">03</span>
+            <strong class="text-sm text-white block mb-1">Scale-up Roadmap</strong>
+            <p data-i18n="p2.g3" class="text-xs text-slate-400 leading-relaxed">Development direction includes exfoliation, dispersion/formulation and lab-to-pilot scale-up planning.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DIVISION 3: ADVANCED COATING MATERIALS ================= -->
+  <section id="coatings" class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span data-i18n="p3.badge">Division 03</span>
+        </div>
+        <h2 data-i18n="p3.title" class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          Advanced Coating Materials &amp; Technical Development
+        </h2>
+        <p data-i18n="p3.desc" class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          Advanced coating materials are part of FUJI JAPAN's current development work. Our activities include functional-material formulation, coating of metallic substrates and mesh structures, controlled thermal processing, prototype/sample preparation and technical evaluation.
+        </p>
+      </div>
+
+      <!-- 5 R&D Capability Cards in Water Glass -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-8">
+        
+        <!-- 1: Formulation -->
+        <div class="water-glass-card p-5 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3 border border-emerald-500/30">
+            <i data-lucide="beaker" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="p3.c1_title" class="font-bold text-white text-base mb-1.5">Formulation</h3>
+          <p data-i18n="p3.c1_desc" class="text-xs text-slate-400 leading-relaxed">
+            Functional material mixing, dispersion and coating-material preparation.
+          </p>
+        </div>
+
+        <!-- 2: Substrate / Mesh Coating -->
+        <div class="water-glass-card p-5 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-3 border border-teal-500/30">
+            <i data-lucide="grid" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="p3.c2_title" class="font-bold text-white text-base mb-1.5">Substrate / Mesh Coating</h3>
+          <p data-i18n="p3.c2_desc" class="text-xs text-slate-400 leading-relaxed">
+            Prototype coating on metallic substrates and mesh structures.
+          </p>
+        </div>
+
+        <!-- 3: Thermal Processing -->
+        <div class="water-glass-card p-5 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3 border border-emerald-500/30">
+            <i data-lucide="flame" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="p3.c3_title" class="font-bold text-white text-base mb-1.5">Thermal Processing</h3>
+          <p data-i18n="p3.c3_desc" class="text-xs text-slate-400 leading-relaxed">
+            Programmable controlled heating for material development and treatment.
+          </p>
+        </div>
+
+        <!-- 4: Characterization -->
+        <div class="water-glass-card p-5 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-3 border border-teal-500/30">
+            <i data-lucide="microscope" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="p3.c4_title" class="font-bold text-white text-base mb-1.5">Characterization</h3>
+          <p data-i18n="p3.c4_desc" class="text-xs text-slate-400 leading-relaxed">
+            SEM observation and coordination of XRD, ICP-OES and related analysis.
+          </p>
+        </div>
+
+        <!-- 5: Technical Records -->
+        <div class="water-glass-card p-5 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3 border border-emerald-500/30">
+            <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="p3.c5_title" class="font-bold text-white text-base mb-1.5">Technical Records</h3>
+          <p data-i18n="p3.c5_desc" class="text-xs text-slate-400 leading-relaxed">
+            Sample specifications, evaluation records and development documentation.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Confidentiality Protection Notice in Dark Glass -->
+      <div class="p-5 water-glass-card rounded-2xl flex items-center gap-3.5 text-xs sm:text-sm text-emerald-200 border border-emerald-500/30">
+        <i data-lucide="lock" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+        <span data-i18n="p3.confidential_note">
+          Confidential formulations and unpublished intellectual property are not disclosed in public-facing materials.
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6-STAGE WORKFLOW ================= -->
+  <section id="workflow" class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="milestone" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span data-i18n="workflow.tag">Execution Methodology</span>
+        </div>
+        <h2 data-i18n="workflow.heading" class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
+          Project &amp; Development Workflow
+        </h2>
+        <p data-i18n="workflow.subheading" class="text-base sm:text-lg text-slate-300 font-light">
+          A disciplined 6-stage structured pathway from initial need identification to sustained commercial success.
+        </p>
+      </div>
+
+      <!-- 6 Horizontal Workflow Steps in Water-Glass Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+        
+        <div class="water-glass-card p-5 rounded-2xl">
+          <span class="text-2xl font-black text-emerald-400 block mb-2 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]">01</span>
+          <h3 data-i18n="wf.s1_title" class="font-bold text-white text-sm mb-1.5">Define Need</h3>
+          <p data-i18n="wf.s1_desc" class="text-xs text-slate-400 leading-relaxed">
+            Capacity, feed characteristics, target products and site constraints.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-5 rounded-2xl">
+          <span class="text-2xl font-black text-teal-300 block mb-2 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">02</span>
+          <h3 data-i18n="wf.s2_title" class="font-bold text-white text-sm mb-1.5">Source / Match</h3>
+          <p data-i18n="wf.s2_desc" class="text-xs text-slate-400 leading-relaxed">
+            Identify suitable manufacturers, engineering companies and equipment providers.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-5 rounded-2xl">
+          <span class="text-2xl font-black text-emerald-400 block mb-2 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]">03</span>
+          <h3 data-i18n="wf.s3_title" class="font-bold text-white text-sm mb-1.5">Evaluate</h3>
+          <p data-i18n="wf.s3_desc" class="text-xs text-slate-400 leading-relaxed">
+            Review technical fit, delivery conditions, commercial structure and supplier capability.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-5 rounded-2xl">
+          <span class="text-2xl font-black text-teal-300 block mb-2 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">04</span>
+          <h3 data-i18n="wf.s4_title" class="font-bold text-white text-sm mb-1.5">Coordinate</h3>
+          <p data-i18n="wf.s4_desc" class="text-xs text-slate-400 leading-relaxed">
+            Coordinate drawings, specifications, process questions and technical discussions.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-5 rounded-2xl">
+          <span class="text-2xl font-black text-emerald-400 block mb-2 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]">05</span>
+          <h3 data-i18n="wf.s5_title" class="font-bold text-white text-sm mb-1.5">Commercialize</h3>
+          <p data-i18n="wf.s5_desc" class="text-xs text-slate-400 leading-relaxed">
+            Support quotations, comparison, meetings, documentation and negotiation flow.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-5 rounded-2xl">
+          <span class="text-2xl font-black text-white block mb-2">06</span>
+          <h3 data-i18n="wf.s6_title" class="font-bold text-white text-sm mb-1.5">Support</h3>
+          <p data-i18n="wf.s6_desc" class="text-xs text-slate-400 leading-relaxed">
+            Support logistics communication and maintain supplier-customer coordination.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY PARTNER WITH US ================= -->
+  <section class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span data-i18n="why.tag">Competitive Advantages</span>
+        </div>
+        <h2 data-i18n="why.heading" class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          Why Partner with FUJI JAPAN
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg font-light">
+          We combine local Japanese proximity, technical precision, and cross-border commercial execution.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(16,185,129,0.25)]">
+            <i data-lucide="building" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="why.s1_title" class="font-bold text-base text-white mb-2">Japan-Side Supplier Access</h3>
+          <p data-i18n="why.s1_desc" class="text-xs text-slate-400 leading-relaxed">
+            Ability to identify and communicate with Japanese manufacturers, technical suppliers and specialist laboratories.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30 flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(45,212,191,0.25)]">
+            <i data-lucide="network" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="why.s2_title" class="font-bold text-base text-white mb-2">Technical-Commercial Coordination</h3>
+          <p data-i18n="why.s2_desc" class="text-xs text-slate-400 leading-relaxed">
+            Translate customer requirements into supplier specifications while keeping commercial discussions aligned.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(16,185,129,0.25)]">
+            <i data-lucide="flask-round" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="why.s3_title" class="font-bold text-base text-white mb-2">Materials Development Capability</h3>
+          <p data-i18n="why.s3_desc" class="text-xs text-slate-400 leading-relaxed">
+            Hands-on formulation, coating, thermal treatment, sample preparation and evaluation support.
+          </p>
+        </div>
+
+        <div class="water-glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(16,185,129,0.25)]">
+            <i data-lucide="globe" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="why.s4_title" class="font-bold text-base text-white mb-2">Cross-Border Business Support</h3>
+          <p data-i18n="why.s4_desc" class="text-xs text-slate-400 leading-relaxed">
+            Japanese/English communication, documentation, meetings, quotations, logistics and long-term relationship follow-up.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & RFQ SECTION (LIQUID GLASS FORM) ================= -->
+  <section id="contact" class="py-20 sm:py-28 relative z-10 border-b border-emerald-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Column: Direct Corporate Contacts -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full liquid-badge text-emerald-300 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="contact" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span data-i18n="contact.tag">Get in Touch</span>
+          </div>
+
+          <h2 data-i18n="contact.heading" class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            Connect with FUJI JAPAN
+          </h2>
+
+          <p data-i18n="contact.subheading" class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            We welcome discussions with manufacturers, processors, traders, research partners and customers seeking practical long-term collaboration.
+          </p>
+
+          <!-- Contact Cards in Dark Water-Glass -->
+          <div class="water-glass-card p-6 rounded-3xl space-y-4 text-sm">
+            <div class="flex items-start gap-3.5">
+              <i data-lucide="map-pin" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong data-i18n="contact.office_title" class="text-white block font-semibold mb-0.5">Head Office</strong>
+                <span data-i18n="contact.address_val" class="text-slate-400">1205 (67-8) Ishikawa, Numazu, Shizuoka 410-0317, Japan</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <i data-lucide="phone" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong data-i18n="contact.tel_label" class="text-white block font-semibold mb-0.5">Telephone</strong>
+                <a href="tel:+81559132932" class="text-slate-300 hover:text-emerald-400 transition font-mono">+81 55-913-2932</a>
+                <span class="text-xs text-slate-500 block mt-0.5">FAX: +81 55-913-2833</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <i data-lucide="smartphone" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong data-i18n="contact.mobile_label" class="text-white block font-semibold mb-0.5">Mobile (Direct)</strong>
+                <a href="tel:+819085506469" class="text-slate-300 hover:text-emerald-400 transition font-mono">+81 90-8550-6469</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <i data-lucide="mail" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong data-i18n="contact.email_label" class="text-white block font-semibold mb-0.5">Official Email</strong>
+                <a href="mailto:fujijapan@zenithair.jp" class="text-emerald-400 hover:underline font-mono">fujijapan@zenithair.jp</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <i data-lucide="globe" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong data-i18n="contact.web_label" class="text-white block font-semibold mb-0.5">Corporate Web</strong>
+                <a href="https://zenithair.jp" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-emerald-400 transition font-mono">https://zenithair.jp</a>
+              </div>
+            </div>
+          </div>
+
+          <p data-i18n="contact.hours" class="text-xs text-slate-500 italic">
+            Business Hours: Monday – Friday 09:00 – 18:00 (JST)
+          </p>
+        </div>
+
+        <!-- Right Column: Interactive Sourcing & RFQ Form -->
+        <div class="lg:col-span-7">
+          <div class="water-glass-card p-6 sm:p-8 rounded-3xl border border-emerald-500/30">
+            
+            <h3 data-i18n="form.title" class="text-xl font-bold text-white mb-6">
+              Submit an Inquiry / Request Evaluation Sample
+            </h3>
+
+            <!-- Success Alert (Initially Hidden) -->
+            <div id="rfq-success-message" class="hidden mb-6 p-4 bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 rounded-2xl text-sm flex items-start gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+              <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block font-semibold">Request Received</strong>
+                <span data-i18n="form.success_msg">Thank you! Your inquiry has been logged. Our international technical coordination team will review your specifications and contact you shortly.</span>
+              </div>
+            </div>
+
+            <form id="rfq-contact-form" class="space-y-4">
+              
+              <!-- Inquiry Type Selector -->
+              <div>
+                <label data-i18n="form.inquiry_type" for="form-inquiry-type" class="block text-xs font-bold text-emerald-300 uppercase tracking-wider mb-2">
+                  Select Inquired Area
+                </label>
+                <select id="form-inquiry-type" required class="glass-input w-full px-4 py-3 rounded-2xl text-sm text-slate-100">
+                  <option value="graphite" data-i18n="form.opt_graphite" class="bg-[#080F0B] text-slate-200">Natural Vein Graphite Supply &amp; Evaluation Sample</option>
+                  <option value="equipment" data-i18n="form.opt_equipment" class="bg-[#080F0B] text-slate-200">Industrial Mineral Separation Equipment Sourcing</option>
+                  <option value="coatings" data-i18n="form.opt_coatings" class="bg-[#080F0B] text-slate-200">Advanced Coating Materials &amp; Prototyping</option>
+                  <option value="general" data-i18n="form.opt_general" class="bg-[#080F0B] text-slate-200">General Sourcing / International Business Partnership</option>
+                </select>
+              </div>
+
+              <!-- Name & Company -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label data-i18n="form.name" for="form-name" class="block text-xs font-semibold text-slate-400 mb-1">Full Name</label>
+                  <input type="text" id="form-name" required data-i18n-placeholder="form.name" placeholder="Full Name" class="glass-input w-full px-4 py-3 rounded-2xl text-sm text-slate-100 placeholder:text-slate-600">
+                </div>
+                <div>
+                  <label data-i18n="form.company" for="form-company" class="block text-xs font-semibold text-slate-400 mb-1">Company / Organization</label>
+                  <input type="text" id="form-company" required data-i18n-placeholder="form.company" placeholder="Company Name" class="glass-input w-full px-4 py-3 rounded-2xl text-sm text-slate-100 placeholder:text-slate-600">
+                </div>
+              </div>
+
+              <!-- Email & Phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label data-i18n="form.email" for="form-email" class="block text-xs font-semibold text-slate-400 mb-1">Business Email</label>
+                  <input type="email" id="form-email" required data-i18n-placeholder="form.email" placeholder="name@company.com" class="glass-input w-full px-4 py-3 rounded-2xl text-sm text-slate-100 placeholder:text-slate-600">
+                </div>
+                <div>
+                  <label data-i18n="form.phone" for="form-phone" class="block text-xs font-semibold text-slate-400 mb-1">Contact Phone / WhatsApp</label>
+                  <input type="tel" id="form-phone" data-i18n-placeholder="form.phone" placeholder="+1 (555) 000-0000" class="glass-input w-full px-4 py-3 rounded-2xl text-sm text-slate-100 placeholder:text-slate-600">
+                </div>
+              </div>
+
+              <!-- Dynamic Graphite Specific Fields -->
+              <div id="graphite-extra-fields" class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-emerald-950/30 border border-emerald-500/25 rounded-2xl">
+                <div>
+                  <label data-i18n="form.graphite_mesh" for="form-graphite-mesh" class="block text-xs font-semibold text-emerald-300 mb-1">Target Mesh / Particle Size</label>
+                  <input type="text" id="form-graphite-mesh" placeholder="e.g. +150 mesh, -100 mesh, or micron" class="glass-input w-full px-3 py-2 rounded-xl text-xs text-slate-100 placeholder:text-slate-600">
+                </div>
+                <div>
+                  <label data-i18n="form.graphite_qty" for="form-graphite-qty" class="block text-xs font-semibold text-emerald-300 mb-1">Volume (MT) or Sample (g)</label>
+                  <input type="text" id="form-graphite-qty" placeholder="e.g. 500g sample / 20 MT monthly" class="glass-input w-full px-3 py-2 rounded-xl text-xs text-slate-100 placeholder:text-slate-600">
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label data-i18n="form.message" for="form-message" class="block text-xs font-semibold text-slate-400 mb-1">Project Details / Technical Requirements</label>
+                <textarea id="form-message" rows="4" required data-i18n-placeholder="form.message" placeholder="Please specify your technical parameters, throughput requirements, or target delivery timeline..." class="glass-input w-full px-4 py-3 rounded-2xl text-sm text-slate-100 placeholder:text-slate-600"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-emerald-glass w-full py-4 px-6 rounded-2xl text-sm flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4 text-black"></i>
+                <span data-i18n="form.submit">Submit Sourcing / Sample Request</span>
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#020504] text-slate-400 text-xs py-12 border-t border-emerald-950/60 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-emerald-950/40">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="FUJI JAPAN" class="h-9 w-auto">
+          <span class="text-emerald-800 text-sm">|</span>
+          <span class="italic text-emerald-400 font-semibold" data-i18n="footer.tagline">The Future is today.</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-xs font-medium">
+          <a href="#overview" data-i18n="nav.overview" class="hover:text-emerald-400 transition">Overview</a>
+          <a href="#equipment" data-i18n="nav.equipment" class="hover:text-emerald-400 transition">Equipment</a>
+          <a href="#graphite" data-i18n="nav.graphite" class="hover:text-emerald-400 transition">Graphite &amp; Graphene</a>
+          <a href="#coatings" data-i18n="nav.coatings" class="hover:text-emerald-400 transition">Advanced Coatings</a>
+          <a href="#contact" data-i18n="nav.contact" class="hover:text-emerald-400 transition">Contact</a>
+          <a href="RESOURCES/FUJI_JAPAN_Company_Profile_Website_2026_v3.pdf" download target="_blank" class="text-emerald-400 hover:underline flex items-center gap-1 font-semibold">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            Company Profile (PDF)
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500">
+        <p data-i18n="footer.rights">&copy; 2026 FUJI JAPAN. All rights reserved.</p>
+        <p data-i18n="footer.disclaimer" class="text-center md:text-right max-w-xl">
+          FUJI JAPAN acts as a specialized technical sourcing and business coordination agency. Final equipment manufacturing, warranties, and performance guarantees remain with contracting OEM partners.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= POPUP MODAL FOR RFQ / SAMPLE REQUEST (DARK WATER GLASS) ================= -->
+  <div id="rfq-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-overlay">
+    <div class="water-glass-card rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto border border-emerald-500/40">
+      
+      <button id="close-modal-btn" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full hover:bg-emerald-950/50 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+          <i data-lucide="clipboard-check" class="w-6 h-6 text-emerald-400"></i>
+        </span>
+        <div>
+          <h3 class="text-lg font-bold text-white">Request RFQ or Evaluation Sample</h3>
+          <p class="text-xs text-emerald-400">FUJI JAPAN Technical &amp; Sourcing Coordination Team</p>
+        </div>
+      </div>
+
+      <div class="p-4 bg-black/60 rounded-2xl border border-emerald-500/20 text-xs text-slate-300 space-y-2.5 mb-6">
+        <p class="flex items-center gap-2">
+          <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+          <span><strong class="text-white">Graphite Samples:</strong> Available for lab analysis and particle sizing (+150 mesh, 99.0% C).</span>
+        </p>
+        <p class="flex items-center gap-2">
+          <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+          <span><strong class="text-white">Equipment Sourcing:</strong> Technical specification matching with leading Japanese builders.</span>
+        </p>
+      </div>
+
+      <div class="text-center">
+        <p class="text-sm text-slate-300 mb-5 font-light">
+          You can use our online form below or reach our bilingual coordination desk directly:
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="mailto:fujijapan@zenithair.jp" class="btn-emerald-glass w-full sm:w-auto px-5 py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-black"></i>
+            Email fujijapan@zenithair.jp
+          </a>
+          <a href="tel:+81559132932" class="btn-dark-glass w-full sm:w-auto px-5 py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+            Call +81 55-913-2932
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
