@@ -1,0 +1,9 @@
+{
+  "name": "fuji-japan",
+  "version": "1.0.0",
+  "description": "FUJI JAPAN - Japanese Industrial Equipment & Advanced Materials",
+  "scripts": {
+    "dev": "node local-server.js",
+    "start": "node local-server.js"
+  }
+}
