@@ -3,15 +3,15 @@
    =================================================== */
 
 :root {
-  --bg-deep-black: #030706;
-  --bg-surface-black: #080F0B;
-  --bg-card-glass: rgba(10, 18, 14, 0.72);
-  --color-emerald-neon: #10B981;
-  --color-emerald-light: #34D399;
-  --color-emerald-glow: rgba(16, 185, 129, 0.35);
+  --bg-deep-black: #020606;
+  --bg-surface-black: #060E0D;
+  --bg-card-glass: rgba(8, 18, 17, 0.72);
+  --color-emerald-neon: #0EB892;
+  --color-emerald-light: #2DD4BF;
+  --color-emerald-glow: rgba(14, 184, 146, 0.38);
   --color-water-cyan: #06B6D4;
-  --glass-border: rgba(52, 211, 153, 0.18);
-  --glass-border-hover: rgba(52, 211, 153, 0.55);
+  --glass-border: rgba(45, 212, 191, 0.20);
+  --glass-border-hover: rgba(45, 212, 191, 0.58);
 }
 
 html {
@@ -51,7 +51,7 @@ body {
 .orb-green-1 {
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.28) 0%, rgba(5, 150, 105, 0.08) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 184, 146, 0.28) 0%, rgba(6, 182, 212, 0.12) 40%, rgba(8, 145, 178, 0.04) 60%, transparent 75%);
   filter: blur(80px);
   top: -80px;
   right: -80px;
@@ -61,7 +61,7 @@ body {
 .orb-green-2 {
   width: 650px;
   height: 650px;
-  background: radial-gradient(circle, rgba(5, 150, 105, 0.24) 0%, rgba(16, 185, 129, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(14, 184, 146, 0.14) 45%, rgba(2, 132, 199, 0.05) 60%, transparent 75%);
   filter: blur(95px);
   top: 40%;
   left: -220px;
@@ -71,7 +71,7 @@ body {
 .orb-white-1 {
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(209, 250, 229, 0.08) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(204, 251, 241, 0.09) 40%, transparent 70%);
   filter: blur(75px);
   top: 15%;
   left: 20%;
@@ -81,7 +81,7 @@ body {
 .orb-white-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, rgba(16, 185, 129, 0.08) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, rgba(14, 184, 146, 0.08) 45%, transparent 70%);
   filter: blur(85px);
   top: 65%;
   right: 5%;
@@ -91,7 +91,7 @@ body {
 .orb-green-3 {
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, rgba(52, 211, 153, 0.22) 0%, rgba(6, 95, 70, 0.08) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.24) 0%, rgba(14, 165, 233, 0.10) 45%, rgba(15, 118, 110, 0.06) 65%, transparent 75%);
   filter: blur(80px);
   bottom: 0;
   left: 30%;
@@ -134,23 +134,23 @@ body {
 
 /* Liquid Glass Navbar */
 .glass-nav-dark {
-  background: rgba(4, 10, 7, 0.82);
+  background: rgba(4, 10, 9, 0.82);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+  border-bottom: 1px solid rgba(45, 212, 191, 0.18);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* Water-glass card styling with refractive highlights */
 .water-glass-card {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(10, 18, 14, 0.78) 100%);
+  background: linear-gradient(135deg, rgba(14, 184, 146, 0.06) 0%, rgba(6, 182, 212, 0.03) 40%, rgba(8, 18, 17, 0.80) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
   box-shadow: 
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.12),
-    inset 0 0 20px 0 rgba(16, 185, 129, 0.04),
+    inset 0 0 20px 0 rgba(14, 184, 146, 0.04),
     0 15px 35px -10px rgba(0, 0, 0, 0.9);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -167,9 +167,9 @@ body {
   height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(52, 211, 153, 0.5) 20%, 
+    rgba(45, 212, 191, 0.5) 20%, 
     rgba(255, 255, 255, 0.6) 50%, 
-    rgba(52, 211, 153, 0.5) 80%, 
+    rgba(6, 182, 212, 0.5) 80%, 
     transparent 100%
   );
   opacity: 0.7;
@@ -181,87 +181,87 @@ body {
   border-color: var(--glass-border-hover);
   box-shadow: 
     inset 0 1px 2px 0 rgba(255, 255, 255, 0.25),
-    inset 0 0 25px 0 rgba(16, 185, 129, 0.1),
+    inset 0 0 25px 0 rgba(14, 184, 146, 0.12),
     0 25px 45px -12px rgba(0, 0, 0, 0.95),
-    0 0 35px -5px rgba(16, 185, 129, 0.3);
+    0 0 35px -5px rgba(6, 182, 212, 0.35);
 }
 
-/* Liquid Glass Buttons */
+/* Liquid Glass Buttons (20% blue-infused) */
 .btn-emerald-glass {
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(135deg, #0EB892 0%, #0891B2 100%);
   color: #020403;
   font-weight: 700;
   box-shadow: 
-    0 0 20px rgba(16, 185, 129, 0.4),
+    0 0 22px rgba(14, 184, 146, 0.45),
     inset 0 1px 1px rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-emerald-glass:hover {
-  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  background: linear-gradient(135deg, #2DD4BF 0%, #06B6D4 100%);
   box-shadow: 
-    0 0 30px rgba(52, 211, 153, 0.6),
+    0 0 32px rgba(45, 212, 191, 0.6),
     inset 0 1px 2px rgba(255, 255, 255, 0.6);
   transform: translateY(-2px);
 }
 
 .btn-dark-glass {
-  background: rgba(16, 26, 20, 0.65);
+  background: rgba(14, 25, 23, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   color: #F8FAFC;
-  border: 1px solid rgba(52, 211, 153, 0.25);
+  border: 1px solid rgba(45, 212, 191, 0.25);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .btn-dark-glass:hover {
-  background: rgba(22, 38, 29, 0.85);
-  border-color: rgba(52, 211, 153, 0.55);
-  color: #34D399;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+  background: rgba(18, 36, 33, 0.85);
+  border-color: rgba(45, 212, 191, 0.55);
+  color: #2DD4BF;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.28);
   transform: translateY(-2px);
 }
 
 /* Water Droplet Badge */
 .liquid-badge {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.08) 100%);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 0 15px rgba(16, 185, 129, 0.15);
+  background: linear-gradient(135deg, rgba(14, 184, 146, 0.16) 0%, rgba(6, 182, 212, 0.12) 100%);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 0 15px rgba(6, 182, 212, 0.2);
 }
 
 /* Pipeline button active and hover states */
 .pipeline-btn {
-  background: rgba(12, 22, 17, 0.6);
-  border: 1px solid rgba(52, 211, 153, 0.15);
+  background: rgba(10, 20, 18, 0.6);
+  border: 1px solid rgba(45, 212, 191, 0.18);
   transition: all 0.25s ease;
 }
 
 .pipeline-btn:hover {
-  background: rgba(16, 32, 24, 0.8);
-  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(14, 30, 26, 0.8);
+  border-color: rgba(45, 212, 191, 0.45);
 }
 
 .pipeline-btn.active {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(6, 78, 59, 0.4) 100%) !important;
-  border-color: #10B981 !important;
+  background: linear-gradient(135deg, rgba(14, 184, 146, 0.22) 0%, rgba(6, 182, 212, 0.32) 100%) !important;
+  border-color: #0EB892 !important;
   box-shadow: 
-    0 0 20px rgba(16, 185, 129, 0.35),
+    0 0 20px rgba(6, 182, 212, 0.35),
     inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Modal Liquid Overlay */
 .modal-overlay {
-  background: rgba(2, 6, 4, 0.85);
+  background: rgba(2, 6, 5, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
 /* Form Inputs in Dark Glass */
 .glass-input {
-  background: rgba(10, 18, 14, 0.85);
-  border: 1px solid rgba(52, 211, 153, 0.2);
+  background: rgba(8, 18, 16, 0.85);
+  border: 1px solid rgba(45, 212, 191, 0.2);
   color: #F8FAFC;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease;
@@ -269,26 +269,26 @@ body {
 
 .glass-input:focus {
   outline: none;
-  border-color: #10B981;
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.8);
-  background: rgba(14, 25, 20, 0.95);
+  border-color: #0EB892;
+  box-shadow: 0 0 15px rgba(14, 184, 146, 0.35), 0 0 8px rgba(6, 182, 212, 0.25), inset 0 1px 2px rgba(0, 0, 0, 0.8);
+  background: rgba(12, 24, 22, 0.95);
 }
 
-/* Custom Scrollbar for Dark Black/Green */
+/* Custom Scrollbar for Dark Ocean/Teal/Green */
 ::-webkit-scrollbar {
   width: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #030706;
+  background: #020606;
 }
 ::-webkit-scrollbar-thumb {
-  background: #064E3B;
+  background: #0D9488;
   border-radius: 9999px;
-  border: 2px solid #030706;
+  border: 2px solid #020606;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #10B981;
-  box-shadow: 0 0 10px #10B981;
+  background: #0EB892;
+  box-shadow: 0 0 10px #06B6D4;
 }
 
 /* Japanese typography refinements */

@@ -369,11 +369,23 @@ function initBackgroundCanvas() {
       this.phase = Math.random() * Math.PI * 2;
       this.pulseSpeed = Math.random() * 0.02 + 0.01;
 
-      // 58% emerald green, 42% crystalline pure white
-      this.isGreen = Math.random() < 0.58;
+      // 45% ocean-tinted emerald, 20% vibrant cyan/blue, 35% crystalline white
+      const r = Math.random();
+      if (r < 0.45) {
+        this.colorType = 'green';
+        this.colorRgb = '14, 184, 146';
+        this.glowColor = 'rgba(14, 184, 146, 0.85)';
+      } else if (r < 0.65) {
+        this.colorType = 'blue';
+        this.colorRgb = '6, 182, 212';
+        this.glowColor = 'rgba(6, 182, 212, 0.90)';
+      } else {
+        this.colorType = 'white';
+        this.colorRgb = '255, 255, 255';
+        this.glowColor = 'rgba(255, 255, 255, 0.75)';
+      }
       this.baseAlpha = Math.random() * 0.45 + 0.25;
       this.alpha = this.baseAlpha;
-      this.glowColor = this.isGreen ? 'rgba(16, 185, 129, 0.85)' : 'rgba(255, 255, 255, 0.75)';
     }
 
     update() {
@@ -403,10 +415,8 @@ function initBackgroundCanvas() {
       ctx.save();
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = this.isGreen
-        ? `rgba(16, 185, 129, ${Math.max(0.08, this.alpha)})`
-        : `rgba(255, 255, 255, ${Math.max(0.06, this.alpha * 0.9)})`;
-      ctx.shadowBlur = this.isGreen ? 12 : 8;
+      ctx.fillStyle = `rgba(${this.colorRgb}, ${Math.max(0.08, this.alpha)})`;
+      ctx.shadowBlur = this.colorType === 'white' ? 8 : 12;
       ctx.shadowColor = this.glowColor;
       ctx.fill();
       ctx.restore();
@@ -426,7 +436,7 @@ function initBackgroundCanvas() {
   function animate() {
     ctx.clearRect(0, 0, width, height);
 
-    // Draw delicate connecting water lines between adjacent green & white nodes
+    // Draw delicate connecting water lines between adjacent green, blue & white nodes
     const maxDist = 115;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -442,10 +452,10 @@ function initBackgroundCanvas() {
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(p2.x, p2.y);
 
-          // Subtle green-to-white or matching gradient
+          // Subtle green-to-blue-to-white harmonic gradient
           const grad = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-          const col1 = p1.isGreen ? `rgba(16, 185, 129, ${lineAlpha})` : `rgba(255, 255, 255, ${lineAlpha * 0.85})`;
-          const col2 = p2.isGreen ? `rgba(16, 185, 129, ${lineAlpha})` : `rgba(255, 255, 255, ${lineAlpha * 0.85})`;
+          const col1 = `rgba(${p1.colorRgb}, ${lineAlpha * (p1.colorType === 'white' ? 0.85 : 1.0)})`;
+          const col2 = `rgba(${p2.colorRgb}, ${lineAlpha * (p2.colorType === 'white' ? 0.85 : 1.0)})`;
           grad.addColorStop(0, col1);
           grad.addColorStop(1, col2);
 
