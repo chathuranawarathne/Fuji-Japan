@@ -1,6 +1,20 @@
 // FUJI JAPAN - Core Application Controller
 
-let currentLang = localStorage.getItem('fuji_lang') || 'en';
+function getStoredLang() {
+  try {
+    return localStorage.getItem('fuji_lang') || 'en';
+  } catch (e) {
+    return 'en';
+  }
+}
+
+function setStoredLang(lang) {
+  try {
+    localStorage.setItem('fuji_lang', lang);
+  } catch (e) {}
+}
+
+let currentLang = getStoredLang();
 
 // Step descriptions for interactive mineral processing pipeline
 const pipelineDetails = {
@@ -31,14 +45,20 @@ const pipelineDetails = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   // Initialize Lucide icons
-  if (window.lucide) {
-    window.lucide.createIcons();
-  }
+  try {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  } catch (e) {}
 
   // Set initial language
-  setLanguage(currentLang);
+  try {
+    setLanguage(currentLang);
+  } catch (e) {
+    console.error('Failed to set language:', e);
+  }
 
   // Setup Language Switcher
   const langToggleBtn = document.getElementById('lang-toggle-btn');
@@ -66,22 +86,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Modal handlers
-  setupModal();
+  try { setupModal(); } catch (e) {}
 
   // Mineral processing pipeline interactivity
-  setupPipelineInspector();
+  try { setupPipelineInspector(); } catch (e) {}
 
   // Form submission handler
-  setupRFQForm();
+  try { setupRFQForm(); } catch (e) {}
 
   // Initialize interactive green & white liquid background animation
-  initBackgroundCanvas();
-});
+  try { initBackgroundCanvas(); } catch (e) { console.error('Canvas error:', e); }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 // Update UI Language
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('fuji_lang', lang);
+  setStoredLang(lang);
   document.documentElement.lang = lang;
 
   const dict = translations[lang] || translations.en;
@@ -299,6 +325,19 @@ function initBackgroundCanvas() {
   });
 
   window.addEventListener('mouseleave', () => {
+    mouse.x = -1000;
+    mouse.y = -1000;
+  });
+
+  // Touch device support for interactive liquid ripple
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
     mouse.x = -1000;
     mouse.y = -1000;
   });
