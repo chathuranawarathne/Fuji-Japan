@@ -677,18 +677,6 @@ function initBackgroundCanvas() {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Discreet Japanese & Technical Telemetry
-    ctx.font = '600 9px monospace, sans-serif';
-    ctx.fillStyle = 'rgba(77, 166, 255, 0.22)';
-    ctx.fillText('FUJI JAPAN // MAT-ENG.SYS [REV-2.4]', 24, height - 32);
-    ctx.fillStyle = 'rgba(148, 163, 184, 0.20)';
-    ctx.fillText('ALLUVIAL CLASSIFIER: ACTIVE // SP² GRAPHENE LATTICE', 24, height - 18);
-
-    // Stage indicator markers along flow
-    ctx.fillStyle = 'rgba(148, 163, 184, 0.16)';
-    ctx.fillText('STAGE-01: RAW FEED INLET', width * 0.5 + 16, height * 0.12);
-    ctx.fillText('STAGE-02: DENSITY & MAG SEPARATION', width * 0.5 + 16, height * 0.35);
-
     ctx.restore();
   }
 
