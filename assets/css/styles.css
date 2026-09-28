@@ -3,15 +3,16 @@
    =================================================== */
 
 :root {
-  --bg-deep-black: #020606;
-  --bg-surface-black: #060E0D;
-  --bg-card-glass: rgba(8, 18, 17, 0.72);
+  --bg-deep-black: #0d1117;
+  --bg-surface-black: #161b22;
+  --bg-card-glass: rgba(13, 17, 23, 0.76);
   --color-emerald-neon: #0EB892;
-  --color-emerald-light: #2DD4BF;
-  --color-emerald-glow: rgba(14, 184, 146, 0.38);
-  --color-water-cyan: #06B6D4;
-  --glass-border: rgba(45, 212, 191, 0.20);
-  --glass-border-hover: rgba(45, 212, 191, 0.58);
+  --color-emerald-light: #4da6ff;
+  --color-emerald-glow: rgba(77, 166, 255, 0.35);
+  --color-water-cyan: #4da6ff;
+  --color-champagne-gold: #d4af37;
+  --glass-border: rgba(77, 166, 255, 0.18);
+  --glass-border-hover: rgba(77, 166, 255, 0.45);
 }
 
 html {
@@ -51,8 +52,8 @@ body {
 .orb-green-1 {
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, rgba(14, 184, 146, 0.28) 0%, rgba(6, 182, 212, 0.12) 40%, rgba(8, 145, 178, 0.04) 60%, transparent 75%);
-  filter: blur(80px);
+  background: radial-gradient(circle, rgba(77, 166, 255, 0.18) 0%, rgba(6, 182, 212, 0.08) 40%, rgba(13, 17, 23, 0.02) 65%, transparent 75%);
+  filter: blur(85px);
   top: -80px;
   right: -80px;
   animation: float-green-1 20s infinite ease-in-out alternate;
@@ -61,8 +62,8 @@ body {
 .orb-green-2 {
   width: 650px;
   height: 650px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(14, 184, 146, 0.14) 45%, rgba(2, 132, 199, 0.05) 60%, transparent 75%);
-  filter: blur(95px);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.14) 0%, rgba(14, 184, 146, 0.08) 45%, rgba(13, 17, 23, 0.02) 65%, transparent 75%);
+  filter: blur(100px);
   top: 40%;
   left: -220px;
   animation: float-green-2 24s infinite ease-in-out alternate;
@@ -71,7 +72,7 @@ body {
 .orb-white-1 {
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(204, 251, 241, 0.09) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(203, 213, 225, 0.12) 0%, rgba(77, 166, 255, 0.06) 40%, transparent 70%);
   filter: blur(75px);
   top: 15%;
   left: 20%;
@@ -81,7 +82,7 @@ body {
 .orb-white-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, rgba(14, 184, 146, 0.08) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.10) 0%, rgba(77, 166, 255, 0.06) 45%, transparent 70%);
   filter: blur(85px);
   top: 65%;
   right: 5%;
@@ -91,7 +92,7 @@ body {
 .orb-green-3 {
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, rgba(45, 212, 191, 0.24) 0%, rgba(14, 165, 233, 0.10) 45%, rgba(15, 118, 110, 0.06) 65%, transparent 75%);
+  background: radial-gradient(circle, rgba(77, 166, 255, 0.16) 0%, rgba(148, 163, 184, 0.06) 45%, transparent 75%);
   filter: blur(80px);
   bottom: 0;
   left: 30%;
